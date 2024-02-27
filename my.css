@@ -1425,4 +1425,31 @@ a {
       font-size: 18px;
   }
 }
+/* CSS for mobile devices */
+/* @media (max-width: 768px) {
+  #player {
+    display: none; 
+  }
+} */
+
+/* CSS for desktop and laptops */
+/* @media (min-width: 769px) {
+  .mobile-video {
+    display: none;
+  }
+} */
+
+/* CSS for mobile devices *//* CSS for desktop and laptops */
+/* 
+@media (max-width: 768px) {
+  .desktop-video {
+      display: none; 
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-video {
+      display: none; 
+  }
+} */
 
