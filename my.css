@@ -1172,7 +1172,7 @@ body.night-mode {
 /* filter: contrast(1.2) saturate(1.8) brightness(1.3) hue-rotate(15deg) */
  /* filter: contrast(1.0) saturate(1.1) brightness(1.5) hue-rotate(0deg); */
 .vcurve {
-  filter: contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg);
+  filter: contrast(1.2) saturate(1.5)  hue-rotate(0deg);
  
 }
 .curve {
