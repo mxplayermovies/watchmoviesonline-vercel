@@ -89,10 +89,9 @@
   /* filter: contrast(1.1) saturate(1.2) brightness(1.3) hue-rotate(0deg); Apply filter */
 }
 
-/* .moviePoster:hover img {
-  transform: scale(1.05); 
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
-} */
+.moviePoster:hover img {
+  transform: scale(1.02); 
+}
 
 .tabList {
   display: flex;
