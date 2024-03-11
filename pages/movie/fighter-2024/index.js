@@ -53,7 +53,7 @@ const fighter_2024 = ({ movie }) => {
   }
 
   useEffect(() => {
-    fetchMovieData('INDEX69')
+    fetchMovieData('INDEX65')
       .then(data => {
         // Do something with the fetched movie data
       })
@@ -69,7 +69,7 @@ const fighter_2024 = ({ movie }) => {
       try {
         const response = await fetch('/movies.json')
         const data = await response.json()
-        const movie = data.find(movie => movie.id === 'INDEX69')
+        const movie = data.find(movie => movie.id === 'INDEX65')
         setMovieData(movie)
       } catch (error) {
         console.error('Error fetching movie data:', error)
@@ -102,7 +102,7 @@ const fighter_2024 = ({ movie }) => {
       })
   }
   const onYouTubeIframeAPIReady = () => {
-    var movieId = 'INDEX69'
+    var movieId = 'INDEX65'
     fetchMovieJsonLD(movieId)
       .then(function (movie) {
         var videoId = movie.videoId
@@ -1416,7 +1416,7 @@ const fighter_2024 = ({ movie }) => {
 export async function getServerSideProps () {
   const res = await fetch('https://watchmoviesonline.vercel.app/movies.json')
   const data = await res.json()
-  const selectedMovie = data.find(movie => movie.id === 'INDEX69')
+  const selectedMovie = data.find(movie => movie.id === 'INDEX65')
 
   return {
     props: {
