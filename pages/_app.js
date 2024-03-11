@@ -19,7 +19,7 @@ function Application({ Component, pageProps }) {
         data-admpid="82683"
         strategy="afterInteractive"
       /> */}
-        <GoogleAnalytics measurementId="G-JP9M2FNY1G" />
+        <GoogleAnalytics measurementId="G-REYHDZZ5K8" />
         {/* <Script async data-id="101405628" src="//static.getclicky.com/js"></Script> */}
      
         <PageTransition>  
