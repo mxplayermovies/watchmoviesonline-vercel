@@ -12,6 +12,7 @@ This project is a very minimal starter that includes 2 sample components, a glob
 
 ## Table of Contents:
 
+
 - [Getting Started](#getting-started)
 - [Installation options](#installation-options)
 - [Testing](#testing)
