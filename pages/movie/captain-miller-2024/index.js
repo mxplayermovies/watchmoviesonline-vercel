@@ -234,8 +234,7 @@ const captain_miller_2024 = ({ movie }) => {
   const rankMathSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
-      const rankMathSchema = JSON.stringify({
-        "@context": "https://schema.org",
+      {
         "@type": "Article",
         "headline": `Watch ${movie.name} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
@@ -263,7 +262,7 @@ const captain_miller_2024 = ({ movie }) => {
           "name": "Watch Movies Online™",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://example.com/logo.jpg"
+            "url": "https://watchmoviesonline.vercel.app/og_image.jpg"
           }
         },
         "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
@@ -276,9 +275,10 @@ const captain_miller_2024 = ({ movie }) => {
         "mainEntityOfPage": {
           "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage"
         }
-      });
-      
-     
+      }
+    ]
+  });
+  
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
