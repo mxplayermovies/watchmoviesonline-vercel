@@ -302,9 +302,7 @@ const captain_miller_2024 = ({ movie }) => {
       }
     ]
   });
-  
-  
-    
+     
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
