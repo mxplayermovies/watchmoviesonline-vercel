@@ -246,7 +246,7 @@ export default function Home({ movie }) {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="google-site-verification" content="4dFu4PUk1pc1IYqU6Brt84akCwNxaoUpKSO3gDW0kJ0" />
   <meta name="facebook-domain-verification" content="du918bycikmo1jw78wcl9ih6ziphd7" />
-  <meta name="dailymotion-domain-verification" content="dmv6sg06w9r5eji88" />
+  <meta name='dailymotion-domain-verification' content='dm0zffs8dj8pcb3gd' />
   <link rel="stylesheet" type="text/css" href="/my.css" />
   <meta name="monetag" content="d37258c385441961edc42bec3fb9b7e8" />
   <Script
