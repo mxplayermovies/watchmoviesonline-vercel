@@ -516,7 +516,7 @@ const air_force_one_down_2024 = ({ movie }) => {
         />
      
         <script src='https://www.youtube.com/iframe_api' />
-        {/* Include Bootstrap and jQuery scripts */}
+      
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
