@@ -404,7 +404,7 @@ const air_force_one_down_2024 = ({ movie }) => {
     },
     actor: movie.starring.map(actor => ({
       "@type": "PerformanceRole",
-      "characterName": actor
+      "characterName": actor,
       '@type': 'Person',
       name: actor
     })),
