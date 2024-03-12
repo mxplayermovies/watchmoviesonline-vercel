@@ -402,6 +402,7 @@ const air_force_one_down_2024 = ({ movie }) => {
       '@type': 'Person',
       name: movie.director
     },
+    
     actor: movie.starring.map(actor => ({
       "@type": "PerformanceRole",
       "characterName": actor,
@@ -515,9 +516,9 @@ const air_force_one_down_2024 = ({ movie }) => {
           name='dailymotion-domain-verification'
           content='dmv6sg06w9r5eji88'
         />
-      
+        {/* Add the script tag for the YouTube IFrame Player API */}
         <script src='https://www.youtube.com/iframe_api' />
-     
+        {/* Include Bootstrap and jQuery scripts */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
