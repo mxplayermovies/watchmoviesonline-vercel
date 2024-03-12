@@ -278,7 +278,7 @@ const captain_miller_2024 = ({ movie }) => {
         ]
       },
       {
-        "@type": "BlogPosting",
+        "@type": "Article",
         "headline": `Watch ${movie.name} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
@@ -302,6 +302,7 @@ const captain_miller_2024 = ({ movie }) => {
       }
     ]
   });
+  
      
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
