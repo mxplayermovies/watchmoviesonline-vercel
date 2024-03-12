@@ -257,7 +257,7 @@ const captain_miller_2024 = ({ movie }) => {
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "isPartOf": {
-          "@id": "https://watchmoviesonline.vercel.app/#website"
+          "@id": `${movie && movie.url}#webpage`
         },
         "inLanguage": "en-US"
       },
@@ -291,17 +291,18 @@ const captain_miller_2024 = ({ movie }) => {
         },
         "description": `Watch Movies Online | ${movie && movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
         "name": `Watch ${movie && movie.name} | Watch Movies Online™`,
-        "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#richSnippet`,
+        "@id": `${movie && movie.url}#richSnippet`,
         "isPartOf": {
-          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#webpage`
+          "@id": `${movie && movie.url}#webpage`
         },
         "inLanguage": "en-US",
         "mainEntityOfPage": {
-          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#webpage`
+          "@id": `${movie && movie.url}#webpage`
         }
       }
     ]
   });
+  
   
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
