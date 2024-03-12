@@ -414,21 +414,10 @@ const air_force_one_down_2024 = ({ movie }) => {
         {
           '@type': 'EntryPoint',
           name: `${movie && movie.name} `,
-          urlTemplate: movie.url // Set the URL template to movie.url
+          urlTemplate: movie.url 
         }
       ]
-    },
-    "potentialAction": {
-      "@type": "WatchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": movie.url
-      }
-    },
-    // potentialAction: {
-    //   '@type': 'WatchAction',
-    //   target: movie.url // Set the target URL directly to movie.url
-    // },
+  
     locationCreated: {
       '@type': 'Place',
       name: movie.country
