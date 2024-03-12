@@ -253,7 +253,7 @@ const captain_miller_2024 = ({ movie }) => {
         "@type": "WebPage",
         "@id": `${movie && movie.url ? movie.url + '#' : ''}webpage`,
         "url": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app'}`,
-        "name": `${movie && movie.name ? movie.name : ''} | Watch Movies Online™`,
+        "name": `${movie && movie.name ? 'Watch ' + movie.name + ' | Watch Movies Online™' : ''}`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "isPartOf": {
@@ -279,7 +279,7 @@ const captain_miller_2024 = ({ movie }) => {
       },
       {
         "@type": "BlogPosting",
-        "headline": `${movie && movie.name ? movie.name + ' | ' : ''}Watch Movies Online™`,
+        "headline": `${movie && movie.name ? 'Watch ' + movie.name + ' | Watch Movies Online™' : ''}`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "articleSection": "Movie",
@@ -290,7 +290,7 @@ const captain_miller_2024 = ({ movie }) => {
           "@id": "https://watchmoviesonline.vercel.app/#person"
         },
         "description": `${movie && movie.name ? 'Watch Movies Online | ' + movie.name : ''} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
-        "name": `${movie && movie.name ? movie.name + ' | ' : ''}Watch Movies Online™`,
+        "name": `${movie && movie.name ? 'Watch ' + movie.name + ' | Watch Movies Online™' : ''}`,
         "@id": `${movie && movie.url ? movie.url + '#' : ''}richSnippet`,
         "isPartOf": {
           "@id": `${movie && movie.url ? movie.url + '#' : ''}webpage`
