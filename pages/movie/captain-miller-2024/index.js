@@ -231,6 +231,80 @@ const captain_miller_2024 = ({ movie }) => {
     )
   }
 
+  const rankMathSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['Person', 'Organization'],
+        '@id': 'https://watchmoviesonline.vercel.app/#person',
+        name: 'Dr Trailer'
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://watchmoviesonline.vercel.app/#website',
+        url: 'https://watchmoviesonline.vercel.app',
+        name: 'Watch Movies Online™',
+        publisher: {
+          '@id': 'https://watchmoviesonline.vercel.app/#person'
+        },
+        inLanguage: 'en-US'
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${movie && movie.url}#webpage`,
+        url: `${movie && movie.url}`,
+        name: `${movie && movie.name} | Watch Movies Online™`,
+        datePublished: '2024-01-13T13:00:00+00:00',
+        dateModified: '2024-01-13T13:13:00+00:00',
+        isPartOf: {
+          '@id': 'https://watchmoviesonline.vercel.app/#website'
+        },
+        inLanguage: 'en-US'
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://watchmoviesonline.vercel.app/author/watchmoviesonline/',
+        name: 'Dr Trailer',
+        url: 'https://watchmoviesonline.vercel.app/author/watchmoviesonline/',
+        image: {
+          '@type': 'ImageObject',
+          '@id':
+            'https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&amp;d=mm&amp;r=g',
+          url: 'https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&amp;d=mm&amp;r=g',
+          caption: 'Dr Trailer',
+          inLanguage: 'en-US'
+        },
+        sameAs: ['https://watchmoviesonline.vercel.app']
+      },
+      {
+        '@type': 'BlogPosting',
+        headline: `${movie && movie.name} | Watch Movies Online™`,
+        datePublished: '2024-01-13T13:00:00+00:00',
+        dateModified: '2024-01-13T13:13:00+00:00',
+        articleSection: 'Movie',
+        author: {
+          '@id':
+            'https://watchmoviesonline.vercel.app/author/watchmoviesonline/'
+        },
+        publisher: {
+          '@id': 'https://watchmoviesonline.vercel.app/#person'
+        },
+        description: `Watch Movies Online | ${
+          movie && movie.name
+        } for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
+        name: `${movie && movie.name} | Watch Movies Online™`,
+        '@id': `${movie && movie.url}#richSnippet`,
+        isPartOf: {
+          '@id': `${movie && movie.url}#webpage`
+        },
+        inLanguage: 'en-US',
+        mainEntityOfPage: {
+          '@id': `${movie && movie.url}#webpage`
+        }
+      }
+    ]
+  })
+
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
@@ -360,6 +434,10 @@ const captain_miller_2024 = ({ movie }) => {
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: rankMathSchema }}
         />
         <link
           rel='stylesheet'
@@ -1089,39 +1167,39 @@ const captain_miller_2024 = ({ movie }) => {
         </div>
 
         <style jsx>{`
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Set a high z-index value */
-  }
+          .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Set a high z-index value */
+          }
 
-  .popup {
-    width: 800px;
-    background-color: gray;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: slide-down 0.5s ease;
-    position: relative; /* Ensure the z-index works */
-    z-index: 10000; /* Set a higher z-index value */
-  }
+          .popup {
+            width: 800px;
+            background-color: gray;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: slide-down 0.5s ease;
+            position: relative; /* Ensure the z-index works */
+            z-index: 10000; /* Set a higher z-index value */
+          }
 
-  @keyframes slide-down {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-`}</style>
+          @keyframes slide-down {
+            from {
+              transform: translateY(-100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+        `}</style>
 
         <hr className='my-5' />
         <div className='container mt-5'>
@@ -1344,57 +1422,57 @@ const captain_miller_2024 = ({ movie }) => {
                     'contrast(1.2) saturate(1.5) brightness(1.3) hue-rotate(0deg)'
                 }}
               ></div>
-               <p
-                              style={{
-                                color: '#40D7BC',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                textShadow: '3px 5px 5px #000',
-                                fontSize: '15px',
-                                fontWeight: 'bold'
-                              }}
-                            >
-                              *Note: Use Setting in Player to improve the
-                              Quality of video to HD Quality 1080p.
-                            </p>
+              <p
+                style={{
+                  color: '#40D7BC',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textShadow: '3px 5px 5px #000',
+                  fontSize: '15px',
+                  fontWeight: 'bold'
+                }}
+              >
+                *Note: Use Setting in Player to improve the Quality of video to
+                HD Quality 1080p.
+              </p>
             </div>
           </div>
         )}
-       <style jsx>{`
-  .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Set a high z-index value */
-  }
+        <style jsx>{`
+          .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Set a high z-index value */
+          }
 
-  .popup {
-    width: 800px;
-    background-color: gray;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    animation: slide-down 0.5s ease;
-    position: relative; /* Ensure the z-index works */
-    z-index: 10000; /* Set a higher z-index value */
-  }
+          .popup {
+            width: 800px;
+            background-color: gray;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: slide-down 0.5s ease;
+            position: relative; /* Ensure the z-index works */
+            z-index: 10000; /* Set a higher z-index value */
+          }
 
-  @keyframes slide-down {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-`}</style>
+          @keyframes slide-down {
+            from {
+              transform: translateY(-100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+        `}</style>
 
         <div class='container1'>
           <ShareButtons
@@ -1443,4 +1521,4 @@ export async function getServerSideProps () {
   }
 }
 
-export default captain_miller_2024;
+export default captain_miller_2024
