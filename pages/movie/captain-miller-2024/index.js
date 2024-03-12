@@ -295,6 +295,7 @@ const captain_miller_2024 = ({ movie }) => {
         "isPartOf": {
           "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage"
         },
+        "url": movie.url || "https://watchmoviesonline.vercel.app/",
         "inLanguage": "en-US",
         "mainEntityOfPage": {
           "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage"
