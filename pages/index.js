@@ -121,80 +121,154 @@ export default function Home({ movie }) {
     };
   }, []);
 
-  const schemaData = {
+  const rankMathSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "CollectionPage",
-        "@id": "https://watchmoviesonline.vercel.app/",
-        "url": "https://watchmoviesonline.vercel.app/",
-        "name": "Watch Movies Online™ | Watch Movies, TV-Series & Sports Live Online Free",
-        "isPartOf": {
-          "@id": "https://watchmoviesonline.vercel.app/#website"
-        },
-        "about": {
-          "@id": "https://watchmoviesonline.vercel.app/#organization"
-        },
-        "description": "Watch Movies Online™ - Watch Movies, TV-Series & Sports Live Online Free",
-        "breadcrumb": {
-          "@id": "https://watchmoviesonline.vercel.app/#breadcrumb"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://watchmoviesonline.vercel.app/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Watch Movies Online™ | Watch Movies, TV-Series & Sports Live Online Free"
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://watchmoviesonline.vercel.app/#website",
-        "url": "https://watchmoviesonline.vercel.app/",
-        "name": "Watch Movies Online™ | Watch Movies, TV-Series & Sports Live Online Free",
-        "description": "Watch Movies Online™ - Watch Movies, TV-Series & Sports Live Online Free",
-        "publisher": {
-          "@id": "https://watchmoviesonline.vercel.app/#organization"
-        },
-        "potentialAction": [
-          {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://watchmoviesonline.vercel.app/?s={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
-        ],
-        "inLanguage": "en-US"
+        "@type": "Person",
+        "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+        "name": "Dr Trailer",
+        "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+          "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+          "caption": "Dr Trailer",
+          "inLanguage": "en-US"
+        }
       },
       {
         "@type": "Organization",
         "@id": "https://watchmoviesonline.vercel.app/#organization",
-        "name": "Watch Movies Online™ | Watch Movies, TV-Series & Sports Live Online Free",
-        "url": "https://watchmoviesonline.vercel.app/",
-        "logo": {
-          "@type": "ImageObject",
-          "inLanguage": "en-US",
-          "@id": "https://watchmoviesonline.vercel.app/#/schema/logo/image/",
-          "url": "https://watchmoviesonline.vercel.app/logo.png",
-          "contentUrl": "https://watchmoviesonline.vercel.app/logo.png",
-          "width": 834,
-          "height": 135,
-          "caption": "Watch Movies Online™ | Watch Movies, TV-Series & Sports Live Online Free"
+        "name": "Watch Movies Online™",
+        "url": "https://watchmoviesonline.vercel.app"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://watchmoviesonline.vercel.app/#website",
+        "url": "https://watchmoviesonline.vercel.app",
+        "name": "Watch Movies Online™",
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://watchmoviesonline.vercel.app/#organization"
         },
-        "image": {
-          "@id": "https://watchmoviesonline.vercel.app/#/schema/logo/image/"
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://watchmoviesonline.vercel.app/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://watchmoviesonline.vercel.app/#webpage",
+        "url": "https://watchmoviesonline.vercel.app/",
+        "name": "Movie",
+        "datePublished": "2024-01-13T13:00:00+00:00",
+        "dateModified": "2024-01-13T13:13:00+00:00",
+        "about": {
+          "@type": "Person",
+          "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+          "name": "Dr Trailer",
+          "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+          "image": {
+            "@type": "ImageObject",
+            "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+            "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+            "caption": "Dr Trailer",
+            "inLanguage": "en-US"
+          }
+        },
+        "isPartOf": {
+          "@id": "https://watchmoviesonline.vercel.app/#website"
+        },
+        "inLanguage": "en-US",
+        "mainEntity": [
+          {
+            "@type": "Article",
+            "@id": "https://watchmoviesonline.vercel.app/",
+            "url": "https://watchmoviesonline.vercel.app/",
+            "headline": "Movie",
+            "datePublished": "2024-01-13T13:00:00+00:00",
+            "dateModified": "2024-01-13T13:13:00+00:00",
+            "author": {
+              "@type": "Person",
+              "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "name": "Dr Trailer",
+              "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "image": {
+                "@type": "ImageObject",
+                "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "caption": "Dr Trailer",
+                "inLanguage": "en-US"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://watchmoviesonline.vercel.app/#organization",
+              "name": "Watch Movies Online™",
+              "url": "https://watchmoviesonline.vercel.app"
+            }
+          },
+          {
+            "@type": "Article",
+            "@id": "https://watchmoviesonline.vercel.app/",
+            "url": "https://watchmoviesonline.vercel.app/",
+            "headline": "Tvshow",
+            "datePublished": "2024-01-13T13:00:00+00:00",
+            "dateModified": "2024-01-13T13:13:00+00:00",
+            "author": {
+              "@type": "Person",
+              "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "name": "Dr Trailer",
+              "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "image": {
+                "@type": "ImageObject",
+                "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "caption": "Dr Trailer",
+                "inLanguage": "en-US"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://watchmoviesonline.vercel.app/#organization",
+              "name": "Watch Movies Online™",
+              "url": "https://watchmoviesonline.vercel.app"
+            }
+          },
+          {
+            "@type": "Article",
+            "@id": "https://watchmoviesonline.vercel.app/",
+            "url": "https://watchmoviesonline.vercel.app/",
+            "headline": "Adult",
+            "datePublished": "2024-01-13T13:00:00+00:00",
+            "dateModified": "2024-01-13T13:13:00+00:00",
+            "author": {
+              "@type": "Person",
+              "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "name": "Dr Trailer",
+              "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+              "image": {
+                "@type": "ImageObject",
+                "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+                "caption": "Dr Trailer",
+                "inLanguage": "en-US"
+              }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://watchmoviesonline.vercel.app/#organization",
+              "name": "Watch Movies Online™",
+              "url": "https://watchmoviesonline.vercel.app"
+            }
+          }
+        ]
       }
     ]
-  };
-
+  });
+  
   return (
     <div className={`w-full bg-gray-600 shadow`}>
       
@@ -249,10 +323,10 @@ export default function Home({ movie }) {
   <meta name='dailymotion-domain-verification' content='dm0zffs8dj8pcb3gd' />
   <link rel="stylesheet" type="text/css" href="/my.css" />
   <meta name="monetag" content="d37258c385441961edc42bec3fb9b7e8" />
-  <Script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-  />
+  <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: rankMathSchema }}
+        />
 </Head>
  
         <main className={styles.main} >
