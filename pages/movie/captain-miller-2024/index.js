@@ -251,7 +251,7 @@ const captain_miller_2024 = ({ movie }) => {
       },
       {
         "@type": "WebPage",
-      "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/#webpage",
+        "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/#webpage",
         "url": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/",
         "name": `${movie.name} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
@@ -289,12 +289,13 @@ const captain_miller_2024 = ({ movie }) => {
         "publisher": {
           "@id": "https://watchmoviesonline.vercel.app/#person"
         },
-        "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
+        "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
         "name": `Watch ${movie.name} | Watch Movies Online™`,
         "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/#richSnippet",
         "isPartOf": {
           "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/#webpage"
         },
+        "image": movie.image,
         "inLanguage": "en-US",
         "mainEntityOfPage": {
           "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/#webpage"
