@@ -402,10 +402,7 @@ const air_force_one_down_2024 = ({ movie }) => {
       '@type': 'Person',
       name: movie.director
     },
-    
     actor: movie.starring.map(actor => ({
-      "@type": "PerformanceRole",
-      "characterName": actor,
       '@type': 'Person',
       name: actor
     })),
@@ -415,10 +412,11 @@ const air_force_one_down_2024 = ({ movie }) => {
         {
           '@type': 'EntryPoint',
           name: `${movie && movie.name} `,
-          urlTemplate: movie.url 
+          urlTemplate: movie.url // Set the URL template to movie.url
         }
       ]
-  
+    },
+    
     locationCreated: {
       '@type': 'Place',
       name: movie.country
