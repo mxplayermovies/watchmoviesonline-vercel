@@ -292,6 +292,10 @@ const captain_miller_2024 = ({ movie }) => {
   })
 
   return (
+    <script
+    type='application/ld+json'
+    dangerouslySetInnerHTML={{ __html: ldJsonData }}
+  />
     <div>
       <Head>
         <meta
@@ -357,10 +361,7 @@ const captain_miller_2024 = ({ movie }) => {
         {/* Add the script tag for the YouTube IFrame Player API */}
         <script src='https://www.youtube.com/iframe_api' />
         {/* Include Bootstrap and jQuery scripts */}
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: ldJsonData }}
-        />
+       
         <link
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
