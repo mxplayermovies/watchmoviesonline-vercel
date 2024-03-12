@@ -402,8 +402,7 @@ const captain_miller_2024 = ({ movie }) => {
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
-    "@id": "https://watchmoviesonline.vercel.app/movie/captain-miller-2024/"
-    name: movie.name,
+     name: movie.name,
     url: movie.url,
     description: movie.synopsis,
     image: movie.poster,
