@@ -292,11 +292,12 @@ const captain_miller_2024 = ({ movie }) => {
   })
 
   return (
-    <script
+    
+    <div>
+      <script
     type='application/ld+json'
     dangerouslySetInnerHTML={{ __html: ldJsonData }}
   />
-    <div>
       <Head>
         <meta
           name='robots'
