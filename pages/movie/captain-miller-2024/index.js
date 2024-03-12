@@ -234,60 +234,37 @@ const captain_miller_2024 = ({ movie }) => {
   const rankMathSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": ["Person", "Organization"],
-        "@id": "https://watchmoviesonline.vercel.app/#person",
-        "name": "Dr Trailer"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://watchmoviesonline.vercel.app/#website",
-        "url": "https://watchmoviesonline.vercel.app",
-        "name": "Watch Movies Online™",
-        "publisher": {
-          "@id": "https://watchmoviesonline.vercel.app/#person"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "WebPage",
-        "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage",
-        "url": movie.url || "https://watchmoviesonline.vercel.app/",
-        "name": `${movie.name} | Watch Movies Online™`,
-        "datePublished": "2024-01-13T13:00:00+00:00",
-        "dateModified": "2024-01-13T13:13:00+00:00",
-        "isPartOf": {
-          "@id": "https://watchmoviesonline.vercel.app/#website"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@type": "Person",
-        "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
-        "name": "Dr Trailer",
-        "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
-        "image": {
-          "@type": "ImageObject",
-          "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&amp;d=mm&amp;r=g",
-          "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&amp;d=mm&amp;r=g",
-          "caption": "Dr Trailer",
-          "inLanguage": "en-US"
-        },
-        "sameAs": [
-          "https://watchmoviesonline.vercel.app"
-        ]
-      },
-      {
+      const rankMathSchema = JSON.stringify({
+        "@context": "https://schema.org",
         "@type": "Article",
         "headline": `Watch ${movie.name} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "articleSection": "Movie",
         "author": {
-          "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/"
+          "@type": "Person",
+          "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+          "name": "Dr Trailer",
+          "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+          "image": {
+            "@type": "ImageObject",
+            "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+            "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+            "caption": "Dr Trailer",
+            "inLanguage": "en-US"
+          },
+          "sameAs": [
+            "https://watchmoviesonline.vercel.app"
+          ]
         },
         "publisher": {
-          "@id": "https://watchmoviesonline.vercel.app/#person"
+          "@type": "Organization",
+          "@id": "https://watchmoviesonline.vercel.app/#person",
+          "name": "Watch Movies Online™",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://example.com/logo.jpg"
+          }
         },
         "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
         "name": `Watch ${movie.name} | Watch Movies Online™`,
@@ -295,15 +272,12 @@ const captain_miller_2024 = ({ movie }) => {
         "isPartOf": {
           "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage"
         },
-        "url": movie.url || "https://watchmoviesonline.vercel.app/",
         "inLanguage": "en-US",
         "mainEntityOfPage": {
           "@id": movie.url ? `${movie.url}#webpage` : "https://watchmoviesonline.vercel.app/#webpage"
         }
-      }
-    ]
-  });
-  
+      });
+      
      
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
