@@ -251,7 +251,7 @@ const captain_miller_2024 = ({ movie }) => {
       },
       {
         "@type": "WebPage",
-        "@id": `${movie.url}#webpage`,
+        "@id": movie.url + "#webpage",
         "url": movie.url,
         "name": `${movie.name} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
@@ -291,18 +291,18 @@ const captain_miller_2024 = ({ movie }) => {
         },
         "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
         "name": `Watch ${movie.name} | Watch Movies Online™`,
-        "@id": `${movie.url}#richSnippet`,
+        "@id": movie.url + "#richSnippet",
         "isPartOf": {
-          "@id": `${movie.url}#webpage`
+          "@id": movie.url + "#webpage"
         },
         "inLanguage": "en-US",
         "mainEntityOfPage": {
-          "@id": `${movie.url}#webpage`
+          "@id": movie.url + "#webpage"
         }
       }
     ]
   });
-  
+    
   
     
   const ldJsonData = JSON.stringify({
