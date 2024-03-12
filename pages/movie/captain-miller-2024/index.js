@@ -251,9 +251,9 @@ const captain_miller_2024 = ({ movie }) => {
       },
       {
         "@type": "WebPage",
-        "@id": `${movie && movie.url}#webpage`,
-        "url": `${movie && movie.url}`,
-        "name": `${movie && movie.name} | Watch Movies Online™`,
+        "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/'}#webpage`,
+        "url": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/'}`,
+        "name": `${movie && movie.name ? movie.name : 'Watch Movies Online'} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "isPartOf": {
@@ -279,7 +279,7 @@ const captain_miller_2024 = ({ movie }) => {
       },
       {
         "@type": "BlogPosting",
-        "headline": `${movie && movie.name} | Watch Movies Online™`,
+        "headline": `${movie && movie.name ? movie.name : 'Watch Movies Online'} | Watch Movies Online™`,
         "datePublished": "2024-01-13T13:00:00+00:00",
         "dateModified": "2024-01-13T13:13:00+00:00",
         "articleSection": "Movie",
@@ -289,15 +289,15 @@ const captain_miller_2024 = ({ movie }) => {
         "publisher": {
           "@id": "https://watchmoviesonline.vercel.app/#person"
         },
-        "description": `Watch Movies Online | ${movie && movie.name} for free. Where you can find movies of your interest in full HD quality updated on daily basis. Watch Now or Download Now to Watch Later!`,
-        "name": `${movie && movie.name} | Watch Movies Online™`,
-        "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#richSnippet`,
+        "description": `Watch Movies Online | ${movie && movie.name ? movie.name : 'Watch Movies Online'} for free. Where you can find movies of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        "name": `${movie && movie.name ? movie.name : 'Watch Movies Online'} | Watch Movies Online™`,
+        "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/'}#richSnippet`,
         "isPartOf": {
-          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#webpage`
+          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/'}#webpage`
         },
         "inLanguage": "en-US",
         "mainEntityOfPage": {
-          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/movie/undefined'}#webpage`
+          "@id": `${movie && movie.url ? movie.url : 'https://watchmoviesonline.vercel.app/'}#webpage`
         }
       }
     ]
