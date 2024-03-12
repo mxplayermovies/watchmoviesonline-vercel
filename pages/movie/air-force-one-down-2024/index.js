@@ -329,11 +329,71 @@ const air_force_one_down_2024 = ({ movie }) => {
     ]
   });
 
+  // const ldJsonData = JSON.stringify({
+  //   '@context': 'https://schema.org',
+  //   '@type': 'Movie',
+  //   name: movie.name,
+  //   url: movie.url,
+  //   description: movie.synopsis,
+  //   image: movie.poster,
+  //   genre: movie.genre,
+  //   datePublished: movie.yearRelease,
+  //   director: {
+  //     '@type': 'Person',
+  //     name: movie.director
+  //   },
+  //   actor: movie.starring.map(actor => ({
+  //     '@type': 'Person',
+  //     name: actor
+  //   })),
+  //   potentialAction: {
+  //     '@type': 'WatchAction',
+  //     target: [
+  //       {
+  //         '@type': 'EntryPoint',
+  //         name: `${movie && movie.name} `,
+  //         urlTemplate: `${movie && movie.url}`
+  //       }
+  //     ]
+  //   },
+  //   locationCreated: {
+  //     '@type': 'Place',
+  //     name: movie.country
+  //   },
+  //   aggregateRating: {
+  //     '@type': 'AggregateRating',
+  //     ratingValue: movie.aggregateRating.ratingValue,
+  //     bestRating: movie.aggregateRating.bestRating,
+  //     worstRating: movie.aggregateRating.worstRating,
+  //     ratingCount: movie.aggregateRating.ratingCount
+  //   },
+  //   author: [
+  //     {
+  //       '@type': 'Person',
+  //       name: 'DrTrailer',
+  //       url: 'https://watchmoviesonline.vercel.app/DrTrailer.png'
+  //     }
+  //   ],
+  //   publisher: {
+  //     '@type': 'Organization',
+  //     name: 'Watch Movies Online™',
+  //     logo: {
+  //       '@type': 'ImageObject',
+  //       url: 'https://watchmoviesonline.vercel.app/og_image.jpg'
+  //     }
+  //   },
+  //   additionalProperty: {
+  //     '@type': 'PropertyValue',
+  //     name: 'Action Platform',
+  //     value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
+  //   }
+  // })
+
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
     name: movie.name,
-    url: movie.url,
+    url: movie.url, // Add the movie URL here
     description: movie.synopsis,
     image: movie.poster,
     genre: movie.genre,
@@ -352,7 +412,7 @@ const air_force_one_down_2024 = ({ movie }) => {
         {
           '@type': 'EntryPoint',
           name: `${movie && movie.name} `,
-          urlTemplate: `${movie && movie.url}`
+          urlTemplate: movie.url // Set the URL template to movie.url
         }
       ]
     },
@@ -387,7 +447,8 @@ const air_force_one_down_2024 = ({ movie }) => {
       name: 'Action Platform',
       value: ['Desktop Web Platform', 'iOS Platform', 'Android Platform']
     }
-  })
+  });
+  
 
   return (
     <div>
