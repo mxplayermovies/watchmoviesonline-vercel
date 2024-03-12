@@ -244,6 +244,105 @@ const Tracker_S01_2024 = ({ movie }) => {
     )
   }
 
+  const rankMathSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Person", "Organization"],
+        "@id": "https://watchmoviesonline.vercel.app/#person",
+        "name": "Dr Trailer"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://watchmoviesonline.vercel.app/#website",
+        "url": "https://watchmoviesonline.vercel.app/",
+        "name": "Watch Movies Online™",
+        "publisher": {
+          "@id": "https://watchmoviesonline.vercel.app/#person"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#webpage",
+        "url": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/",
+        "name": `${movie.name} | Watch Movies Online™`,
+        "datePublished": "2024-01-13T13:00:00+00:00",
+        "dateModified": "2024-01-13T13:13:00+00:00",
+        "isPartOf": {
+          "@id": "https://watchmoviesonline.vercel.app/#website"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+        "name": "Dr Trailer",
+        "url": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+          "url": "https://secure.gravatar.com/avatar/5d6510600085b5328aa1ab8e9a14e02a?s=96&d=mm&r=g",
+          "caption": "Dr Trailer",
+          "inLanguage": "en-US"
+        },
+        "sameAs": [
+          "https://watchmoviesonline.vercel.app/"
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#article",
+        "headline": `Watch ${movie.name} | Watch Movies Online™`,
+        "datePublished": "2024-01-13T13:00:00+00:00",
+        "dateModified": "2024-01-13T13:13:00+00:00",
+        "articleSection": "Movie",
+        "author": {
+          "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/"
+        },
+        "publisher": {
+          "@id": "https://watchmoviesonline.vercel.app/#person"
+        },
+        "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        "image": movie.image,
+        "name": `Watch ${movie.name} | Watch Movies Online™`,
+        "isPartOf": {
+          "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#webpage"
+        },
+        "inLanguage": "en-US",
+        "mainEntityOfPage": {
+          "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#webpage"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#blogPost",
+        "headline": `Watch ${movie.name} | Watch Movies Online™`,
+        "datePublished": "2024-01-13T13:00:00+00:00",
+        "dateModified": "2024-01-13T13:13:00+00:00",
+        "articleSection": "Movie",
+        "author": {
+          "@id": "https://watchmoviesonline.vercel.app/author/watchmoviesonline/"
+        },
+        "publisher": {
+          "@id": "https://watchmoviesonline.vercel.app/#person"
+        },
+        "description": `Watch Movies Online | ${movie.name} for free. Where you can find movies of your interest in full HD quality updated on a daily basis. Watch Now or Download Now to Watch Later!`,
+        "image": movie.image,
+        "name": `Watch ${movie.name} | Watch Movies Online™`,
+        "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#richSnippet",
+        "isPartOf": {
+          "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#webpage"
+        },
+        "inLanguage": "en-US",
+        "mainEntityOfPage": {
+          "@id": "https://watchmoviesonline.vercel.app/tvshow/tracker-s01-2024/#webpage"
+        }
+      }
+    ]
+  });
+
+
   const ldJsonData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Movie',
@@ -376,6 +475,10 @@ const Tracker_S01_2024 = ({ movie }) => {
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: ldJsonData }}
+        />
+            <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: rankMathSchema }}
         />
         <link
           rel='stylesheet'
